@@ -1,6 +1,16 @@
 #banner
     height: calc( 100vh - 80px )
-    width: 100vw
-    background: #21cb21
+    width: 100%
     margin-top: 80px
     position: relative
+    .container-banner
+        +make-container(30px)
+        .content-banner
+            display: flex
+            flex-direction: column
+            .title-banner
+                margin: 10% 0
+                font-size: 36px
+                font-weight: 700
+                text-align: center
+                color: var(--titles-subtitles)

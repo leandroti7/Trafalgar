@@ -11,8 +11,16 @@
     font-style: normal;
 }
 
+
+:root {
+    //font-color
+    --color-fonte: #7D7987;
+    --titles-subtitles: #000;
+}
+
+//body
 body {
     font-family: 'muliregular';
     font-size: 14px;
-    color: #7D7987;
+    color: var(--color-fonte);
 }
