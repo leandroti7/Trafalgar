@@ -3,14 +3,47 @@
     width: 100%
     margin-top: 80px
     position: relative
+    overflow-x: hidden
     .container-banner
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
         +make-container(30px)
         .content-banner
             display: flex
             flex-direction: column
+            justify-content: center
+            align-items: center
             .title-banner
                 margin: 10% 0
-                font-size: 36px
+                font-size: 2.2em
                 font-weight: 700
                 text-align: center
                 color: var(--titles-subtitles)
+            p
+                // width: 100%
+                margin: 0 auto
+        figure
+            margin: 0
+            width: 90%
+            transform: translateX(-90px)
+            display: flex
+        span
+            display: flex
+            background: url("../assets/img/points.png")
+            display: flex;
+            width: 20%;
+            height: 150px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            transform: translate(160px)
+            bottom: 150px
+        .button.btn-consult-banner
+            width: 50%
+
+            background-color: var(--button-color);
+            color: #fff
+

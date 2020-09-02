@@ -1,3 +1,10 @@
+// breakpoints
+$xs: 375px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
 // Fonts
 @font-face {
     font-family: 'muliregular';
@@ -11,16 +18,40 @@
     font-style: normal;
 }
 
-
 :root {
     //font-color
     --color-fonte: #7D7987;
     --titles-subtitles: #000;
+    --button-color: #458FF6;
 }
 
 //body
 body {
+    overflow-x: hidden;
     font-family: 'muliregular';
     font-size: 14px;
     color: var(--color-fonte);
+
+    .text-paragraf {
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    .button {
+        width: 75%;
+        height: 45px;
+        background-color: transparent;
+        border: 1px solid var(--button-color);
+        border-radius: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media screen and (min-width: $md) {
+        .text-paragraf {
+            font-size: 14px;
+            text-align: left;
+        }
+    }
 }
