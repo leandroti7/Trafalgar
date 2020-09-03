@@ -1,0 +1,51 @@
+//font-color
+$color-fonte: #7D7987
+$titles-subtitles: #000
+$button-color: #458FF6
+$spothligthColor: #feafde
+$spothligthColorHover: rgb(252, 106, 194)
+$white: #fff
+
+// breakpoints
+$xs: 375px
+$sm: 576px
+$md: 768px
+$lg: 992px
+$xl: 1200px
+
+//mixins
+@mixin media-breakpoint($name)
+    @media screen and (min-width: $name)
+        @content;
+
+
+
+
+//body
+body 
+    font-family: 'muliregular'
+    font-size: 14px
+    color: $color-fonte
+
+    .text-paragraf 
+        font-size: 1rem
+        text-align: center
+
+    .button 
+        width: 75%
+        height: 45px
+        background-color: transparent
+        border: 1px solid $button-color
+        border-radius: 40px
+        display: flex
+        justify-content: center
+        align-items: center
+        font-size: 1rem
+
+    +media-breakpoint($xs)
+        .text-paragraf
+            font-size: 1.2rem
+    +media-breakpoint($md)
+        .text-paragraf 
+            font-size: 14px
+            text-align: left

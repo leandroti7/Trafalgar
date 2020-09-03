@@ -17,33 +17,42 @@
             justify-content: center
             align-items: center
             .title-banner
-                margin: 10% 0
-                font-size: 2.2em
+                margin: 3% 0
+                font-size: 2.1rem
                 font-weight: 700
                 text-align: center
-                color: var(--titles-subtitles)
+                color: $titles-subtitles
             p
-                // width: 100%
                 margin: 0 auto
         figure
             margin: 0
-            width: 90%
+            width: 80%
             transform: translateX(-90px)
             display: flex
         span
             display: flex
             background: url("../assets/img/points.png")
-            display: flex;
-            width: 20%;
-            height: 150px;
-            background-size: contain;
-            background-repeat: no-repeat;
-            position: absolute;
-            transform: translate(160px)
-            bottom: 150px
+            display: flex
+            width: 22%
+            height: 80px
+            background-size: cover
+            background-repeat: no-repeat
+            position: absolute
+            transform: translate(168%)
+            bottom: 17%
         .button.btn-consult-banner
             width: 50%
+            height: 10%
+            background-color: $button-color
+            color: $white
+    +media-breakpoint($xs)
+        .container-banner
+            .content-banner
+                .title-banner
+                    font-size: 2.2rem
+                    margin-bottom: 5%
+            .button.btn-consult-banner
+                height: 8%
 
-            background-color: var(--button-color);
-            color: #fff
+
 
