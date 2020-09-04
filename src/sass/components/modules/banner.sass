@@ -1,9 +1,8 @@
 #banner
-    height: calc( 100vh - 80px )
+    height: 100%
     width: 100%
-    margin-top: 80px
+    margin: 80px 0 25px
     position: relative
-    overflow-x: hidden
     .container-banner
         display: flex;
         justify-content: space-around;
@@ -17,13 +16,13 @@
             justify-content: center
             align-items: center
             .title-banner
-                margin: 3% 0
+                margin: 10% 0 5%
                 font-size: 2.1rem
                 font-weight: 700
                 text-align: center
                 color: $titles-subtitles
             p
-                margin: 0 auto
+                margin: 5% auto
         figure
             margin: 0
             width: 80%
@@ -41,8 +40,9 @@
             transform: translate(168%)
             bottom: 17%
         .button.btn-consult-banner
-            width: 50%
-            height: 10%
+            width: 60%
+            height: 45px
+            margin: 5% 0
             background-color: $button-color
             color: $white
     +media-breakpoint($xs)
@@ -52,7 +52,19 @@
                     font-size: 2.2rem
                     margin-bottom: 5%
             .button.btn-consult-banner
-                height: 8%
+                margin: 8% 0
+                height: 50px
+    +media-breakpoint-height(750px,830px)
+        .container-banner
+            .content-banner
+                .title-banner
+                    margin: 15% 0 10%
+            figure
+                width: 95%
+            .button.btn-consult-banner
+                margin: 15% 0
+    +media-breakpoint-up(sm)
+
 
 
 

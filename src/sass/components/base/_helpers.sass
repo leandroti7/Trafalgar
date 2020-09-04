@@ -7,6 +7,12 @@ $spothligthColorHover: rgb(252, 106, 194)
 $white: #fff
 
 // breakpoints
+
+//height breakpoints
+$hsx: 500px
+$hsm: 750px
+
+//width breakpoints
 $xs: 375px
 $sm: 576px
 $md: 768px
@@ -16,6 +22,11 @@ $xl: 1200px
 //mixins
 @mixin media-breakpoint($name)
     @media screen and (min-width: $name)
+        @content;
+
+
+@mixin media-breakpoint-height($ihgt,$mhgt)
+    @media (min-height: $ihgt) and (max-height: $mhgt)
         @content;
 
 
