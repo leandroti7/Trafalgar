@@ -8,85 +8,96 @@
     z-index: 10
     background: $white
     +make-container(30px)
-    .logo
-        margin: 0
-        width: 176px
-        height: 45px
+    .container-header
         display: flex
-        justify-content: center
         align-items: center
-        img
-            width: 100%
-            height: 100%
-            position: relative
-    nav
-        position: absolute
-        display: none
-    .menu-mobile
-        height: 45%
-        width: 35px
-        position: absolute
-        display: flex
-        flex-direction: column
-        align-items: center
-        justify-content: space-around
-        right: 4%
-        span
-            border-radius: 10px
+        .logo
+            margin: 0
+            width: 176px
+            height: 45px
             display: flex
             justify-content: center
             align-items: center
-            height: 10%
-            width: 90%
-            background: $spothligthColor
+            img
+                width: 100%
+                height: 100%
+                position: relative
+        nav
+            position: absolute
+            display: none
+        .menu-mobile
+            height: 45%
+            width: 35px
+            position: absolute
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: space-around
+            right: 4%
+            span
+                border-radius: 10px
+                display: flex
+                justify-content: center
+                align-items: center
+                height: 10%
+                width: 90%
+                background: $spothligthColor
 
     +media-breakpoint-up(sm)
-        .menu-mobile
-            width: 40px
+        .container-header
+            .menu-mobile
+                width: 40px
 
     +media-breakpoint-up(md)
-        justify-content: space-between
-        nav
-            position: relative
-            display: flex
-            .menu
+        .container-header
+            +make-container(5%)
+            width: 100%
+            justify-content: space-between
+            nav
+                position: relative
                 display: flex
-                margin: 0
-                padding: 0
-                .items
-                    list-style: none
-                    margin: 0 15px
-                    a
-                        color: $color-fonte
-                        text-decoration: none
-                        transition: color .3s ease-out
-                        justify-content: center
-                        align-items: center
-                        &::after
-                            opacity: 0
-                            content: ''
-                            width: 1%
-                            height: 3px
-                            display: flex
-                            margin: 0 auto
-                            background-color: $spothligthColor
-                            transition: all .3s ease-in-out
-                    &:hover
+                .menu
+                    display: flex
+                    margin: 0
+                    padding: 0
+                    .items
+                        list-style: none
+                        margin: 0 15px
                         a
-                            color: $spothligthColorHover
+                            color: $color-fonte
+                            text-decoration: none
+                            transition: color .3s ease-out
+                            justify-content: center
+                            align-items: center
+                            font-size: 0.9rem
                             &::after
-                                opacity: 1
-                                width: 100%
+                                opacity: 0
+                                content: ''
+                                width: 1%
+                                height: 3px
+                                display: flex
+                                margin: 0 auto
+                                background-color: $spothligthColor
+                                transition: all .3s ease-in-out
+                        &:hover
+                            a
+                                color: $spothligthColorHover
+                                &::after
+                                    opacity: 1
+                                    width: 100%
 
-        .menu-mobile
-            display: none
+            .menu-mobile
+                display: none
 
     +media-breakpoint-up(lg)
         height: 100px
-        +make-container(15%)
-        nav
-            .menu
-                .items
-                    margin: 0 20px
-                    a   
-                        font-size: 16px
+        .container-header
+            nav
+                .menu
+                    .items
+                        margin: 0 20px
+                        a   
+                            // font-size: 16px
+    +media-breakpoint-up(xl)
+        .container-header
+            max-width: 1200px
