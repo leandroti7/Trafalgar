@@ -1,1 +1,83 @@
 
+#our_services
+    header
+        width: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        h2
+            font-size: 1.9rem
+            width: auto
+        p
+            text-align: center
+            font-size: 1rem
+            line-height: 20px
+            margin: 5% 0 10%
+            +make-container(30px)
+    .content-services
+        +make-container(30px)
+        justify-content: center
+        align-items: center
+        display: flex
+        flex-direction: column
+        .type-services
+            width: 100%
+            height: 355px
+            border-radius: 20px
+            margin-bottom: 35px
+            padding: 45px 30px
+            figure
+                margin: 0 0 20px
+            .description-type-services
+                .text-paragraf
+                    text-align: left
+    +media-breakpoint-up(md)
+        header
+            width: 75%
+            margin: 0 auto
+            p
+                margin: 5% 0
+        .content-services
+            display: flex
+            justify-content: space-between
+            flex-direction: row
+            flex-wrap: wrap
+            width: 100%
+            max-width: 720px
+            .type-services
+                width: 48%
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+            .btn-read-more
+                width: 300px
+                margin: 0 auto
+    +media-breakpoint-up(lg)
+        header
+            max-width: 55%
+        .content-services
+            width: 100%
+            max-width: 960px
+            .type-services
+                width: 31%
+    +media-breakpoint-up(xl)
+        &::before
+            content: ''
+            position: absolute
+            width: 100%
+            height: 100%
+            z-index: -1
+            background: 
+                image: url('../assets/img/wahter.png')
+                size: 55%
+                repeat: no-repeat
+                position: -130px 145px
+        .content-services
+            position: relative
+            width: 100%
+            max-width: 1200px
+            .type-services
+                background-color: #fffbce
+
+
