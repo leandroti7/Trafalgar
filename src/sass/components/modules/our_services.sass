@@ -1,5 +1,8 @@
 
 #our_services
+    &::before
+        content: ''
+        display: none
     header
         width: 100%
         display: flex
@@ -22,21 +25,44 @@
         display: flex
         flex-direction: column
         .type-services
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            background-color: #f1ebeb2e
             width: 100%
-            height: 355px
+            height: 310px
             border-radius: 20px
             margin-bottom: 35px
-            padding: 45px 30px
+            padding: 30px
             figure
                 margin: 0 0 20px
+                height: 30%
+                img
+                    height: 100%
             .description-type-services
+                .title-services
+                    font-size: 1.5rem
+                    font-weight: 600
+                    color: $black
                 .text-paragraf
                     text-align: left
+                    font-size: 1rem
     +media-breakpoint-up(md)
         header
             width: 75%
             margin: 0 auto
-            p
+            h2
+                font-size: 2.2rem
+                color: $black
+                font-weight: 600
+                &::after
+                    content: ''
+                    display: flex
+                    width: 55px
+                    height: 4px
+                    background-color: $color-fonte
+                    margin: 30px auto 0
+            .description-services
                 margin: 5% 0
         .content-services
             display: flex
@@ -46,23 +72,16 @@
             width: 100%
             max-width: 720px
             .type-services
+                background-color: #fff
                 width: 48%
-                display: flex
-                flex-direction: column
-                justify-content: space-between
             .btn-read-more
-                width: 300px
+                width: 25%
+                height: 60px
+                font-size: 1.5rem
                 margin: 0 auto
     +media-breakpoint-up(lg)
-        header
-            max-width: 55%
-        .content-services
-            width: 100%
-            max-width: 960px
-            .type-services
-                width: 31%
-    +media-breakpoint-up(xl)
         &::before
+            display: block
             content: ''
             position: absolute
             width: 100%
@@ -70,14 +89,25 @@
             z-index: -1
             background: 
                 image: url('../assets/img/wahter.png')
-                size: 55%
+                size: 65% 50%
                 repeat: no-repeat
-                position: -130px 145px
+                position: -190px 215px
+        header
+            max-width: 65%
+            margin-bottom: 50px
+        .content-services
+            width: 100%
+            max-width: 960px
+            .type-services
+                width: 31%
+    +media-breakpoint-up(xl)
+        &::before
+            background-size: 100% 100%
+        margin-top: 100px
         .content-services
             position: relative
             width: 100%
-            max-width: 1200px
+            padding: 0 30px
+            max-width: 1140px
             .type-services
-                background-color: #fffbce
-
 
