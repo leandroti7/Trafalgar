@@ -1,0 +1,39 @@
+#leading_providers
+    .container-providers
+        padding-top: 15%
+        h2
+            text-align: center
+            margin: 25px 0
+        figure
+            width: 90%
+            margin: 0 auto
+        .content-providers
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: column
+            h2
+                text-align: center
+                margin: 25px 0
+            p
+                margin: 5% 0 10%
+                +make-container(30px)
+            .btn-read-more
+                width: 60%
+                height: 45px
+                margin: 5% 0 10%
+    +media-breakpoint-up(sm)
+        .container-providers
+            padding-top: 5%
+            .content-providers
+                .btn-read-more
+                    width: 35%
+    +media-breakpoint-up(md)
+        .container-providers
+            .content-providers
+                p
+                    width: 75%
+                    text-align: center
+                .btn-read-more
+                    font-size: 1.2rem
+                    height: 56px

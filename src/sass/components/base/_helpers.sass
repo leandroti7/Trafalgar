@@ -39,9 +39,19 @@ body
     font-size: 14px
     color: $color-fonte
 
+    .hidden-xs
+        @media screen and ( max-width: $lg)
+            display: none !important
+    .hidden-lg
+        @media screen and ( min-width: $lg)
+            display: none !important
+
     .text-paragraf 
         font-size: 1rem
         text-align: center
+    .title-section
+        font-size: 1.9rem
+        margin: 15px 0
 
     .button 
         width: 75%
@@ -53,8 +63,6 @@ body
         justify-content: center
         align-items: center
         font-size: 1rem
-        +media-breakpoint($sm)
-            width: 45%
 
     +media-breakpoint($xs)
         .text-paragraf
